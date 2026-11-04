@@ -10,9 +10,9 @@ cd src/java
 javac StatusRule.java StatusRuleTest.java
 java StatusRuleTest
 编号	当前状态	目标状态 预期	实际	结论
-T01	PENDING	   PROCESSING	true	true	PASS
-T02	PROCESSING COMPLETED	true	true	PASS
-T03	PENDING	   COMPLETED	false	false	PASS
+T01	PENDING	    PROCESSING	true	true	PASS
+T02	PROCESSING  COMPLETED	true	true	PASS
+T03	PENDING	    COMPLETED	false	false	PASS
 T04	COMPLETED	PROCESSING	false	false	PASS
 
 
