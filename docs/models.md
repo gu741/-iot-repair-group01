@@ -8,18 +8,23 @@
 COMPLETED 为本次业务终态，不增加重新打开、取消、跳过处理中等状态。
 
 ```mermaid
+
 stateDiagram-v2
     [*] --> PENDING
     PENDING --> PROCESSING: 开始维修
     PROCESSING --> COMPLETED: 完成维修
     COMPLETED --> [*]
+
 ```
+
 中文与英文对应：待处理 PENDING、处理中 PROCESSING、已完成 COMPLETED。
 简单类图
 Device 表示设备，属性：deviceId、name、location。
 WorkOrder 表示工单，属性：orderId、deviceId、description、status。
 一台设备对应 0 到多张工单，每张工单必须对应 1 台设备。
+
 ```mermaid
+
 classDiagram
     Device "1" --> "0..*" WorkOrder : 拥有
     class Device {
@@ -33,7 +38,9 @@ classDiagram
         description
         status
     }
+
 ```
+
 与需求的一致性检查
 ☑ 中文状态与程序英文值对应
 ☑ 只允许两条转换
